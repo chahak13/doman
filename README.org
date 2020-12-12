@@ -1,0 +1,17 @@
+#+title: doman - A small dotfiles manager written in bash
+#+author: Chahak Mehta
+* doman
+The aim of this project is two-fold -
+1. To create a dotfiles manager that is written almost entirely in bash.
+2. To learn bash scripting while finishing this project.
+
+
+**  ToDo [3/8]
+- [ ] Support YAML/JSON/Text configs
+- [ ] YAML/JSON parser to get info
+- [X] Create symlinks to targets based on config (Done for text)
+- [ ] Clear broken symlinks
+- [ ] Create directories required for the symlinks
+- [X] Add support for comments
+- [ ] Add support for extra commands
+- [X] Support directories
