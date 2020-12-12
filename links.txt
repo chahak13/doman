@@ -1,0 +1,2 @@
+# This is a comment line
+<~/path/on/system/to/create/link/at>: <relative/file/path/in/dotfiles/dir>
