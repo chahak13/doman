@@ -21,6 +21,6 @@ Given such a structure, ~doman link vim emacs~ will link ~.vimrc~ to =~/.vimrc=
 and ~init.el~ to =~/.config/emacs/init.el=.
 
 ** Actions
-link - Create symlinks to targets
-remove - Delete all symlinks and target files
-relink - Delete all existing symlinks and relink all files from the passed files
++ link - Create symlinks to targets
++ remove - Delete all symlinks and target files
++ relink - Delete all existing symlinks and relink all files from the passed files
