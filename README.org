@@ -1,17 +1,26 @@
 #+title: doman - A small dotfiles manager written in bash
 #+author: Chahak Mehta
-* doman
-The aim of this project is two-fold -
-1. To create a dotfiles manager that is written almost entirely in bash.
-2. To learn bash scripting while finishing this project.
 
+Doman aims to be a GNU Stow-like dotfiles manager but written in bash. GNU Stow
+is a wonderful and huge package that has many wonderful utilities including
+being used as a dotfiles manager by providing a utility to symlink all files to
+their respective places. My only issue with it is, it is too vast a package be
+used as /just/ a dotfiles manager. This led me to start working on doman, with
+the aim to be just that, a dotfiles manager and nothing more. Its main functions
+comprise of easy symlinking of files from the dotfiles folder to their targets
+and easy deletion and handling of the same and it lets version control systems
+handle the heavy lifting of syncing with multiple machines.
 
-**  ToDo [3/8]
-- [ ] Support YAML/JSON/Text configs
-- [ ] YAML/JSON parser to get info
-- [X] Create symlinks to targets based on config (Done for text)
-- [ ] Clear broken symlinks
-- [ ] Create directories required for the symlinks
-- [X] Add support for comments
-- [ ] Add support for extra commands
-- [X] Support directories
+** Usage
+
+Doman tries to provide a Stow-like interface for linking and determining
+targets. For example, doman assumes a dotfiles structure that is similar to:
+[[imgs/dotfiles-tree.png]]
+
+Given such a structure, ~doman link vim emacs~ will link ~.vimrc~ to =~/.vimrc=
+and ~init.el~ to =~/.config/emacs/init.el=.
+
+** Actions
+link - Create symlinks to targets
+remove - Delete all symlinks and target files
+relink - Delete all existing symlinks and relink all files from the passed files
